@@ -4,8 +4,14 @@ on:
   push:
     branches: [master, development]
     tags: ["v*"]
+    paths:
+      - "docker/**"
+      - ".github/workflows/build-and-publish.yml"
   pull_request:
     branches: [master]
+    paths:
+      - "docker/**"
+      - ".github/workflows/build-and-publish.yml"
 
 env:
   REGISTRY: ghcr.io
