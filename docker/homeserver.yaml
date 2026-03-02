@@ -25,6 +25,10 @@ listeners:
     x_forwarded: true
     resources:
       - names: [client, federation]
+  # Prometheus metrics
+  - port: 9090
+    type: metrics
+    bind_addresses: ['0.0.0.0']
   # The HTTP replication port
   - port: 9093
     bind_address: '127.0.0.1'
@@ -92,6 +96,7 @@ rc_federation:
 bcrypt_rounds: 12
 
 report_stats: false
+enable_metrics: true
 
 signing_key_path: "/config/signing.key"
 
