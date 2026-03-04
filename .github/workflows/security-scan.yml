@@ -3,14 +3,8 @@ name: Security Scan
 on:
   push:
     branches: [master]
-    paths:
-      - "docker/**"
-      - ".github/workflows/security-scan.yml"
   pull_request:
     branches: [master]
-    paths:
-      - "docker/**"
-      - ".github/workflows/security-scan.yml"
   schedule:
     - cron: "0 6 * * 1" # Weekly Monday 06:00 UTC
 
