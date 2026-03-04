@@ -22,6 +22,6 @@ dependencies:
     repository: https://kubelauncher.github.io/charts
     condition: postgresql.enabled
   - name: redis
-    version: "0.2.15"
+    version: "0.2.16"
     repository: https://kubelauncher.github.io/charts
     condition: redis.enabled
